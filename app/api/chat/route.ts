@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import OpenAI from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const runtime = "edge";
 
@@ -21,34 +21,37 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
 
-    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === "your_openai_api_key_here") {
+    if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === "your_gemini_api_key_here") {
       return new Response(
         "AI assistant is not configured yet. Please check visa requirements at the official consulate websites for Portugal, Spain, or Greece.",
         { status: 200, headers: { "Content-Type": "text/plain" } }
       );
     }
 
-    const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+      systemInstruction: SYSTEM_PROMPT,
     });
 
-    const stream = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      stream: true,
-      max_tokens: 400,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        ...messages.slice(-10), // Keep last 10 messages for context
-      ],
-    });
+    // Convert messages to Gemini format
+    // Gemini uses "user" and "model" roles (not "assistant")
+    const history = messages.slice(0, -1).map((m: { role: string; content: string }) => ({
+      role: m.role === "assistant" ? "model" : "user",
+      parts: [{ text: m.content }],
+    }));
+
+    const lastMessage = messages[messages.length - 1];
+
+    const chat = model.startChat({ history });
+    const result = await chat.sendMessageStream(lastMessage.content);
 
     const encoder = new TextEncoder();
-
     const readableStream = new ReadableStream({
       async start(controller) {
         try {
-          for await (const chunk of stream) {
-            const text = chunk.choices[0]?.delta?.content || "";
+          for await (const chunk of result.stream) {
+            const text = chunk.text();
             if (text) {
               controller.enqueue(encoder.encode(text));
             }
