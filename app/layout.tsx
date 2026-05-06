@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "MoveToEU — AI-Powered EU Visa Guidance",
     description:
       "Personalized EU visa guidance for digital nomads. Know exactly what you need, in minutes.",
-    url: "https://movetoeu.co",
+    url: "https://moveto.life",
     siteName: "MoveToEU",
     type: "website",
   },
