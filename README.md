@@ -27,7 +27,7 @@ AI-powered EU visa guidance platform for digital nomads and remote workers.
 Create a `.env.local` file with:
 
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://agrkabmnixjjwlsfbleg.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://jbxwyiruxicmwayezhkz.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 OPENAI_API_KEY=your_openai_api_key_here
 ```
@@ -40,7 +40,7 @@ Apply the migration file to create the `leads` table:
 
 ```bash
 # Via Supabase CLI
-supabase link --project-ref agrkabmnixjjwlsfbleg
+supabase link --project-ref jbxwyiruxicmwayezhkz
 supabase db push
 
 # Or run the SQL manually in Supabase Dashboard → SQL Editor
