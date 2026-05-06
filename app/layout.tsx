@@ -7,47 +7,42 @@ export const metadata: Metadata = {
     template: "%s | MoveToEU",
   },
   description:
-    "Get your EU digital nomad visa right the first time. Personalized eligibility checks, document checklists, and step-by-step guidance for Portugal D8, Spain, and Greece — in minutes, not weeks.",
+    "Get personalized EU visa guidance for Portugal, Spain, and Greece digital nomad visas. AI-powered, country-specific checklists and timelines for remote workers.",
   keywords: [
     "EU digital nomad visa",
-    "Portugal digital nomad visa",
+    "Portugal D8 visa",
     "Spain digital nomad visa",
     "Greece digital nomad visa",
-    "EU visa checklist",
-    "EU visa guidance",
-    "digital nomad Portugal",
-    "visa requirements 2026",
+    "remote work visa Europe",
   ],
   openGraph: {
     title: "MoveToEU — AI-Powered EU Visa Guidance",
     description:
-      "Personalized EU visa guidance for digital nomads. Know exactly what you need, in minutes.",
-    url: "https://moveto.life",
-    siteName: "MoveToEU",
+      "AI-powered visa guidance for digital nomads moving to Europe. Free eligibility check.",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "MoveToEU — AI-Powered EU Visa Guidance",
-    description:
-      "Personalized EU visa guidance for digital nomads. Know exactly what you need, in minutes.",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#FCFBF7] text-[#1A1916] antialiased">
-        {children}
-      </body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
