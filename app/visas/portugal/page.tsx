@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Complete guide to the Portugal D8 Digital Nomad Visa. Eligibility requirements, income threshold, required documents, and step-by-step application process for 2026.",
   openGraph: {
-    title: "Portugal Digital Nomad Visa (D8) — Requirements 2026 | MoveTo.life",
+    title: "Portugal Digital Nomad Visa (D8) — Requirements 2026 | MoveTo.Life",
     description:
       "Everything you need to apply for the Portugal D8 Digital Nomad Visa in 2026 — requirements, documents, timelines.",
   },
