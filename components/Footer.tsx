@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Disclaimer bar */}
       <div className="bg-amber-50 border-t border-amber-200 px-4 py-3">
         <p className="max-w-6xl mx-auto text-xs text-amber-800 text-center leading-relaxed">
-          <strong>Disclaimer:</strong> MoveTo.life is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
+          <strong>Disclaimer:</strong> MoveTo.Life is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
           Always verify requirements with the official consulate or a licensed immigration attorney.
         </p>
       </div>
@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 text-white font-bold text-xl mb-3">
               <span>🌍</span>
-              <span>MoveTo.life</span>
+              <span>MoveTo.Life</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               AI-powered visa guidance for digital nomads and remote workers moving to Europe. Free eligibility check, personalized checklists.
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} MoveTo.life. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MoveTo.Life. All rights reserved.</p>
           <p>Not a law firm. Guidance only — always consult a licensed attorney.</p>
         </div>
       </div>
