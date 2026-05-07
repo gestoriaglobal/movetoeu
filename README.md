@@ -1,75 +1,65 @@
 # MoveToEU
 
-AI-powered EU visa guidance platform for digital nomads and remote workers.
+AI-powered EU visa guidance platform for digital nomads applying for Portugal (D8), Spain, and Greece digital nomad visas.
+
+## Prerequisites
+
+- Node.js 18+
+
+## Local Development
+
+```bash
+git clone https://github.com/gestoriaglobal/movetoeu.git
+cd movetoeu
+npm install
+cp .env.example .env.local
+```
+
+Fill in the three values in `.env.local`:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=https://jbxwyiruxicmwayezhkz.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=   # from Supabase Dashboard → Project Settings → API
+GEMINI_API_KEY=                  # from Google AI Studio (aistudio.google.com)
+```
+
+Then run:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Database Setup
+
+Apply the migration to create the `leads` table before running the app:
+
+```bash
+supabase link --project-ref jbxwyiruxicmwayezhkz
+supabase db push
+```
+
+Or run the SQL manually in **Supabase Dashboard → SQL Editor**:
+`supabase/migrations/20260101000000_create_leads.sql`
+
+## Deploy to Netlify
+
+1. Go to [netlify.com](https://netlify.com) → **Add new site** → **Import from Git**
+2. Select the `gestoriaglobal/movetoeu` repository
+3. Set these environment variables in the Netlify dashboard before deploying:
+   - `NEXT_PUBLIC_SUPABASE_URL` = `https://jbxwyiruxicmwayezhkz.supabase.co`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = (the anon key from Supabase dashboard)
+   - `GEMINI_API_KEY` = (your Gemini API key)
+4. Deploy
 
 ## Tech Stack
 
 - **Framework:** Next.js 14 (App Router) + TypeScript
 - **Styling:** Tailwind CSS
-- **Backend:** Supabase (auth + Postgres)
-- **AI:** OpenAI GPT-4o-mini (chat assistant)
-- **Deployment:** Vercel
-
-## Pages
-
-| Route | Description |
-|-------|-------------|
-| `/` | Landing page |
-| `/quiz` | 6-step eligibility quiz |
-| `/results` | Personalized results (eligibility, checklist, timeline, red flags) |
-| `/pricing` | 3-tier pricing + FAQ |
-| `/blog` | Visa guides index |
-| `/blog/[slug]` | Individual guide articles |
-| `/api/chat` | Streaming AI chat endpoint (OpenAI) |
-
-## Environment Variables
-
-Create a `.env.local` file with:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=https://jbxwyiruxicmwayezhkz.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-Get your Supabase anon key from: Supabase Dashboard → Project Settings → API
-
-## Database Setup
-
-Apply the migration file to create the `leads` table:
-
-```bash
-# Via Supabase CLI
-supabase link --project-ref jbxwyiruxicmwayezhkz
-supabase db push
-
-# Or run the SQL manually in Supabase Dashboard → SQL Editor
-# File: supabase/migrations/20260101000000_create_leads.sql
-```
-
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000)
-
-## Deployment (Vercel)
-
-1. Connect the repo to Vercel
-2. Set environment variables in Vercel dashboard:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `OPENAI_API_KEY`
-3. Deploy
-
-## Visa Coverage (V1)
-
-- 🇵🇹 **Portugal D8 Digital Nomad Visa**
-- 🇪🇸 **Spain Digital Nomad Visa**
-- 🇬🇷 **Greece Digital Nomad Visa**
+- **Backend:** Supabase (Postgres)
+- **AI:** Google Gemini 1.5 Flash (chat assistant)
+- **Deployment:** Netlify
 
 ## Disclaimer
 
