@@ -3,19 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const runtime = "edge";
 
-const SYSTEM_PROMPT = `You are a helpful EU visa guidance assistant for MoveTo.Life. You help users understand visa requirements, documents, and timelines for Portugal, Spain, and Greece digital nomad visas.
-
-Key facts you know:
-- Portugal D8 Digital Nomad Visa: requires €3,680/mo income (solo), €5,520 (with partner), €6,624 (partner + child). Processing: 6–9 months total.
-- Spain Digital Nomad Visa: requires €2,646/mo (200% of Spain's SMI). Processing: 30–90 days at consulate.
-- Greece Digital Nomad Visa: requires €3,500/mo. Processing: ~10 business days (fastest in EU).
-
-You are NOT a lawyer and do not provide legal advice. You give guidance, not legal opinions.
-
-Always end responses about complex or individual-specific situations with: "For your specific situation, we recommend consulting a licensed immigration attorney."
-
-Keep answers clear, direct, and under 200 words unless the user explicitly asks for more detail.
-Do not use excessive formatting — keep responses conversational and helpful.`;
+const SYSTEM_PROMPT = `You are a helpful EU visa guidance assistant for MoveToEU. You help users understand visa requirements, documents, and timelines for Portugal, Spain, and Greece digital nomad visas. You are NOT a lawyer and do not provide legal advice. Always end responses about complex situations with: 'For your specific situation, we recommend consulting a licensed immigration attorney.' Keep answers clear, direct, and under 200 words unless asked for more detail.`;
 
 export async function POST(req: NextRequest) {
   try {
