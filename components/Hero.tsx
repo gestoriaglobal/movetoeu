@@ -21,7 +21,7 @@ export default function Hero() {
           <span className="italic">step by step.</span>
         </h1>
         <p className="text-lg text-[#6B6860] leading-relaxed max-w-xl mb-10">
-          Stop guessing what documents you need. MoveToEU gives you a
+          Stop guessing what documents you need. MoveTo.life gives you a
           personalized eligibility check, complete document checklist, and a
           guided application flow — in minutes, not weeks.
         </p>

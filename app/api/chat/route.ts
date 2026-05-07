@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const runtime = "edge";
 
-const SYSTEM_PROMPT = `You are a helpful EU visa guidance assistant for MoveToEU. You help users understand visa requirements, documents, and timelines for Portugal, Spain, and Greece digital nomad visas.
+const SYSTEM_PROMPT = `You are a helpful EU visa guidance assistant for MoveTo.life. You help users understand visa requirements, documents, and timelines for Portugal, Spain, and Greece digital nomad visas.
 
 Key facts you know:
 - Portugal D8 Digital Nomad Visa: requires €3,680/mo income (solo), €5,520 (with partner), €6,624 (partner + child). Processing: 6–9 months total.

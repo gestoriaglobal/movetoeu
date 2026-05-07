@@ -72,7 +72,7 @@ const tiers = [
 const faqs = [
   {
     q: "Is this legal advice?",
-    a: "No. MoveToEU is a guidance tool, not a law firm. We provide structured information and personalized checklists based on publicly available visa requirements. We do not provide legal advice and are not a substitute for a licensed immigration attorney.",
+    a: "No. MoveTo.life is a guidance tool, not a law firm. We provide structured information and personalized checklists based on publicly available visa requirements. We do not provide legal advice and are not a substitute for a licensed immigration attorney.",
   },
   {
     q: "What if my situation changes?",
@@ -189,7 +189,7 @@ export default function PricingPage() {
         <section className="py-6 px-4 sm:px-6 bg-amber-50 border-y border-amber-200">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm text-amber-800">
-              <strong>Disclaimer:</strong> MoveToEU is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
+              <strong>Disclaimer:</strong> MoveTo.life is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
               Always verify requirements with the official consulate or a licensed immigration attorney.
             </p>
           </div>
