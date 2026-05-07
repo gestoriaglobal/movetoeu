@@ -327,7 +327,7 @@ export default function LandingPage() {
         <section className="py-8 px-4 sm:px-6 bg-amber-50 border-y border-amber-200">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm text-amber-800 leading-relaxed">
-              <strong>Important:</strong> MoveToEU is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
+              <strong>Important:</strong> MoveTo.life is an AI-powered guidance tool, not a law firm. We do not provide legal advice.
               Always verify requirements with the official consulate or a licensed immigration attorney.
             </p>
           </div>
