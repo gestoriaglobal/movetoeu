@@ -339,7 +339,7 @@ export default function QuizPage() {
                       className="mt-0.5 w-4 h-4 rounded border-slate-300 text-[#1B4FFF] focus:ring-[#1B4FFF]"
                     />
                     <span className="text-sm text-slate-600">
-                      I agree to receive visa guidance emails from MoveTo.life. You can unsubscribe at any time.
+                      I agree to receive visa guidance emails from MoveTo.Life. You can unsubscribe at any time.
                     </span>
                   </label>
                 </div>

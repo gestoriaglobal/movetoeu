@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Complete guide to the Greece Digital Nomad Visa. Eligibility requirements, income threshold, required documents, and step-by-step application process for 2026.",
   openGraph: {
-    title: "Greece Digital Nomad Visa — Requirements 2026 | MoveTo.life",
+    title: "Greece Digital Nomad Visa — Requirements 2026 | MoveTo.Life",
     description:
       "Everything you need to apply for the Greece Digital Nomad Visa in 2026 — requirements, documents, timelines.",
   },
