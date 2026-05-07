@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote:
-      "I spent three weeks trying to figure out the Portugal D8 requirements from government sites. MoveToEU gave me a complete checklist in five minutes.",
+      "I spent three weeks trying to figure out the Portugal D8 requirements from government sites. MoveTo.life gave me a complete checklist in five minutes.",
     name: "James O.",
     origin: "US → Portugal",
     type: "Software engineer",
