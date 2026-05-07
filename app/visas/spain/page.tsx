@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Complete guide to the Spain Digital Nomad Visa. Eligibility requirements, income threshold, required documents, and step-by-step application process for 2026.",
   openGraph: {
-    title: "Spain Digital Nomad Visa — Requirements 2026 | MoveToEU",
+    title: "Spain Digital Nomad Visa — Requirements 2026 | MoveTo.life",
     description:
       "Everything you need to apply for the Spain Digital Nomad Visa in 2026 — requirements, documents, timelines.",
   },
