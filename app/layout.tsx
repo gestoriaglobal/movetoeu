@@ -3,8 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "MoveToEU — AI-Powered EU Visa Guidance",
-    template: "%s | MoveToEU",
+    default: "MoveTo.life — AI-Powered EU Visa Guidance",
+    template: "%s | MoveTo.life",
   },
   description:
     "Get personalized EU visa guidance for Portugal, Spain, and Greece digital nomad visas. AI-powered, country-specific checklists and timelines for remote workers.",
@@ -16,11 +16,13 @@ export const metadata: Metadata = {
     "remote work visa Europe",
   ],
   openGraph: {
-    title: "MoveToEU — AI-Powered EU Visa Guidance",
+    title: "MoveTo.life — AI-Powered EU Visa Guidance",
     description:
       "AI-powered visa guidance for digital nomads moving to Europe. Free eligibility check.",
     type: "website",
+    url: "https://moveto.life",
   },
+  metadataBase: new URL("https://moveto.life"),
 };
 
 export default function RootLayout({
